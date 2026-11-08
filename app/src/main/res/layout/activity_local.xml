@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Informação do local (abre ao tocar numa bola do mapa ou num cartão da lista) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cp_fundo"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margem_cabecalho"
+        android:paddingEnd="@dimen/margem_cabecalho">
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_botao_redondo"
+            android:contentDescription="@string/voltar"
+            android:src="@drawable/ic_voltar"
+            android:tint="@color/cp_texto" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="@string/info_local"
+            android:textColor="@color/cp_texto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnEditarLocal"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_botao_redondo"
+            android:contentDescription="@string/editar"
+            android:src="@drawable/ic_editar"
+            android:tint="@color/cp_texto"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margem_ecra"
+            android:paddingEnd="@dimen/margem_ecra"
+            android:paddingBottom="24dp">
+
+            <!-- cabeçalho -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_cabecalho_cartao"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:id="@+id/txtTipo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_caixa_info" android:paddingStart="10dp" android:paddingTop="4dp" android:paddingEnd="10dp" android:paddingBottom="4dp" android:textColor="@color/cp_texto_suave" android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/txtAgua" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:background="@drawable/bg_icone_info" android:paddingStart="10dp" android:paddingTop="4dp" android:paddingEnd="10dp" android:paddingBottom="4dp" android:textColor="@color/cp_destaque" android:textSize="12sp" android:textStyle="bold" />
+                    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                    <FrameLayout android:id="@+id/sinalTopo" android:layout_width="34dp" android:layout_height="34dp">
+                        <ImageView android:id="@+id/icoSinalTopo" android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="center" android:tint="@color/white" android:importantForAccessibility="no" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView android:id="@+id/txtNome" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textColor="@color/cp_texto" android:textSize="21sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtMeta" style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:drawablePadding="5dp" app:drawableStartCompat="@drawable/ic_pin_pequeno" />
+            </LinearLayout>
+
+            <!-- Espécies | Peixedex -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:checkedButton="@+id/tabEspecies"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+                <Button android:id="@+id/tabEspecies" style="@style/Botao.Alternar" android:layout_width="0dp" android:layout_weight="1" android:text="@string/tab_especies" app:icon="@drawable/ic_peixe" />
+                <Button android:id="@+id/tabPeixedex" style="@style/Botao.Alternar" android:layout_width="0dp" android:layout_weight="1" android:text="@string/nav_peixedex" app:icon="@drawable/ic_livro" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView android:id="@+id/txtResumoEspecies" style="@style/Texto.Seccao" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/barraDex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="100"
+                app:indicatorColor="@color/cp_primaria"
+                app:trackColor="@color/cp_cartao2"
+                app:trackCornerRadius="5dp"
+                app:trackThickness="9dp" />
+            <TextView android:id="@+id/txtDicaDex" style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/local_dica_dex" />
+
+            <LinearLayout android:id="@+id/grelhaEspecies" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical" />
+            <TextView android:id="@+id/txtNotaLagostim" style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/local_nota_lagostim" />
+
+            <!-- Onde fica -->
+            <TextView style="@style/Texto.Seccao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/onde_fica" />
+            <LinearLayout
+                android:id="@+id/caixaOndeFica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_cartao"
+                android:orientation="vertical"
+                android:paddingStart="14dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="12dp">
+                <LinearLayout android:id="@+id/linhasOndeFica" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnVerMapa" style="@style/Botao.Contorno" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp" android:layout_weight="1" android:text="@string/ver_no_mapa" app:icon="@drawable/ic_mapa" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnGps" style="@style/Botao.Contorno" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:alpha="0.55" android:enabled="false" android:text="@string/gps_em_breve" app:icon="@drawable/ic_pin" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Licenças -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="bottom" android:orientation="horizontal">
+                <TextView style="@style/Texto.Seccao" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/licencas_necessarias" />
+                <TextView android:id="@+id/txtEmOrdem" style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/alerta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal" android:padding="12dp">
+                <ImageView android:id="@+id/icoAlerta" android:layout_width="22dp" android:layout_height="22dp" android:importantForAccessibility="no" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/txtAlertaTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14.5sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/txtAlertaTexto" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/listaExigencias" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical" />
+
+            <TextView style="@style/Texto.Corpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_cartao" android:drawablePadding="12dp" android:padding="14dp" android:text="@string/levar_licenca" app:drawableStartCompat="@drawable/ic_licenca" app:drawableTint="@color/cp_texto" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistar"
+                style="@style/Botao.Principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/registar_captura"
+                app:icon="@drawable/ic_mais"
+                app:iconGravity="textStart" />
+
+            <TextView style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="@string/aviso_indicativo" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

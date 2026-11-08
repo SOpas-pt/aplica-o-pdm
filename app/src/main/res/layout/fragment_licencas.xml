@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- As minhas licenças -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margem_ecra"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/margem_ecra"
+        android:paddingBottom="24dp">
+
+        <TextView style="@style/Texto.Titulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minhas_licencas" />
+        <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minhas_licencas_sub" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdicionar"
+            style="@style/Botao.Principal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/adicionar_licenca"
+            app:icon="@drawable/ic_mais"
+            app:iconGravity="textStart"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/cntValidas" style="@style/Contador.Licenca" android:layout_marginEnd="8dp" />
+            <TextView android:id="@+id/cntAExpirar" style="@style/Contador.Licenca" android:layout_marginEnd="8dp" />
+            <TextView android:id="@+id/cntExpiradas" style="@style/Contador.Licenca" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/vazio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_cartao"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/ic_licenca" android:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+            <TextView style="@style/Texto.Seccao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/sem_licencas" />
+            <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="@string/sem_licencas_txt" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tituloFalta"
+            style="@style/Texto.Seccao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/licencas_em_falta" />
+
+        <LinearLayout
+            android:id="@+id/listaFalta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

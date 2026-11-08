@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Linha de informação: ícone + rótulo + valor -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_icone_info">
+        <ImageView android:id="@+id/ico" android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="center" android:tint="@color/cp_destaque" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/txtRotulo" style="@style/Texto.Rotulo" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/txtValor" style="@style/Texto.Corpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,436 @@
+<resources>
+    <string name="app_name">Caderno do Pescador</string>
+
+    <string name="nav_pesqueiros">Spots</string>
+    <string name="nav_peixedex">Peixedex</string>
+    <string name="nav_capturas">Catches</string>
+    <string name="nav_licencas">Licences</string>
+    <string name="nav_estatisticas">Statistics</string>
+
+    <string name="menu_guia">Species guide</string>
+    <string name="menu_perfil">Edit profile</string>
+    <string name="menu_definicoes">Settings</string>
+    <string name="menu_ajuda">Help &amp; about</string>
+    <string name="abrir_menu">Open menu</string>
+    <string name="fechar_menu">Close menu</string>
+    <string name="alternar_tema">Light / dark mode</string>
+
+    <string name="pesquisar_hint">Spot name, district or fish…</string>
+    <string name="ordenar">Sort</string>
+    <string name="chip_achiga">Largemouth bass</string>
+    <string name="chip_valida">Valid licence</string>
+    <string name="chip_expirar">Expiring</string>
+    <string name="vista_lista">List</string>
+    <string name="vista_mapa">Map</string>
+    <string name="sem_resultados">No results</string>
+    <string name="sem_resultados_txt">Try another name or species, or clear the filters.</string>
+    <string name="limpar_filtros">Clear filters</string>
+    <string name="mapa_dica">Tap a dot to see the spot · pinch or double-tap to zoom</string>
+    <string name="pagina_anterior">Previous page</string>
+    <string name="pagina_seguinte">Next page</string>
+
+    <string name="info_local">Spot information</string>
+    <string name="tab_especies">What you can catch</string>
+    <string name="onde_fica">Where it is</string>
+    <string name="licencas_necessarias">Required licences</string>
+    <string name="ver_no_mapa">View on map</string>
+    <string name="gps_em_breve">GPS · coming soon</string>
+    <string name="levar_licenca">Always carry your licence (paper or digital) and an ID document.</string>
+    <string name="aviso_indicativo">Species and licences are indicative: always check with ICNF or DGRM.</string>
+    <string name="registar_captura">Log catch</string>
+
+    <string name="minhas_licencas">My licences</string>
+    <string name="minhas_licencas_sub">The fishing licences you hold</string>
+    <string name="adicionar_licenca">Add licence</string>
+    <string name="editar_licenca">Edit licence</string>
+    <string name="apagar_licenca">Delete licence</string>
+    <string name="validas">Valid</string>
+    <string name="a_expirar">Expiring</string>
+    <string name="expiradas">Expired</string>
+    <string name="sem_licencas">You haven\'t added any licences yet</string>
+    <string name="sem_licencas_txt">Add the licences you hold. The app will show in green the spots where you can fish and warn you before they expire.</string>
+    <string name="licencas_em_falta">Licences you don\'t have</string>
+    <string name="ja_tenho_adicionar">I have it · add</string>
+    <string name="tipo_licenca">Licence type</string>
+    <string name="numero_licenca">Licence number (optional)</string>
+    <string name="inicio">Start</string>
+    <string name="valida_ate">Valid until</string>
+    <string name="guardar">Save</string>
+    <string name="cancelar">Cancel</string>
+    <string name="eliminar">Delete</string>
+    <string name="confirmar_eliminar">Are you sure you want to delete this record?</string>
+
+    <string name="capturas_titulo">Catches</string>
+    <string name="capturas_nova">New</string>
+    <string name="capturas_historico">History</string>
+    <string name="cap_pesqueiro">Fishing spot</string>
+    <string name="cap_especie">Species</string>
+    <string name="cap_peso">Weight (kg)</string>
+    <string name="cap_data">Date</string>
+    <string name="cap_isco">Bait</string>
+    <string name="cap_foto">Photo</string>
+    <string name="cap_add_foto">Add photo</string>
+    <string name="cap_foto_desbloqueia">(Unlocks the species)</string>
+    <string name="cap_foto_ja">(Species already unlocked)</string>
+    <string name="cap_foto_sub">Take a photo or choose from gallery</string>
+    <string name="cap_foto_tirar">Take photo</string>
+    <string name="cap_foto_galeria">Choose from gallery</string>
+    <string name="cap_foto_remover">Remove photo</string>
+    <string name="cap_foto_adicionada">Photo added</string>
+    <string name="cap_guardar">Save catch</string>
+    <string name="cap_erro_peso_vazio">Couldn\'t save: enter the weight</string>
+    <string name="cap_erro_peso_invalido">Invalid value (0.01–99 kg)</string>
+    <string name="cap_sem_capturas">No catches yet</string>
+    <string name="cap_sem_capturas_txt">Log your first catch in the “New” tab.</string>
+    <string name="cap_recorde">Record</string>
+    <string name="cap_sem_fotografia">No photo</string>
+    <string name="cap_desbloqueou">New species unlocked!</string>
+    <string name="cap_desbloqueou_sub">%1$s is now unlocked in your Peixedex at every spot where it lives.</string>
+    <string name="cap_guardada">Catch saved</string>
+    <string name="cap_sem_app_sms">No SMS app available</string>
+    <string name="cap_sem_whatsapp">WhatsApp not found</string>
+
+    <string name="peixedex_sub">Your collection · unlocking a species counts at every spot</string>
+    <string name="peixedex_ver_de">View the Peixedex for</string>
+    <string name="peixedex_todas_zonas">All areas</string>
+    <string name="peixedex_proximo">Next challenge</string>
+    <string name="peixedex_proximo_txt">Photograph the %1$s to unlock it.</string>
+    <string name="peixedex_ver_local">View spot</string>
+    <string name="peixedex_guia">Species guide</string>
+    <string name="peixedex_guia_sub">%1$d freshwater, saltwater and brackish species · which bait to use</string>
+    <string name="peixedex_completa">Collection complete! Well done, angler.</string>
+    <string name="peixedex_completa_local">You\'ve unlocked every species at this spot!</string>
+
+    <string name="ficha_titulo">Species sheet</string>
+    <string name="ficha_desbloqueada">Unlocked</string>
+    <string name="ficha_quem">Who\'s that fish?</string>
+    <string name="ficha_por_descobrir">Species to discover</string>
+    <string name="ficha_por_descobrir_sub">No. %1$s · Photograph a specimen to reveal</string>
+    <string name="ficha_habitat">Habitat</string>
+    <string name="ficha_habitat_pista">Hint · habitat</string>
+    <string name="ficha_epoca">Best season</string>
+    <string name="ficha_tamanho">Average size</string>
+    <string name="ficha_iscos">Recommended baits</string>
+    <string name="ficha_identificar">How to identify</string>
+    <string name="ficha_comparar">Compare species</string>
+    <string name="ficha_comparar_sub">how to tell apart</string>
+    <string name="ficha_onde_pescar">Where to fish it</string>
+    <string name="ficha_partilhar">Share (WhatsApp/SMS)</string>
+    <string name="ficha_registar">Log a new catch</string>
+    <string name="ficha_fotografar">Photograph to unlock</string>
+
+    <string name="partilhar_captura">Share catch</string>
+    <string name="btn_whatsapp">WhatsApp</string>
+    <string name="btn_sms">SMS</string>
+    <string name="btn_fechar">Close</string>
+
+    <string name="est_sub">Your fishing summary · calculated from your catches</string>
+    <string name="est_sem_capturas">You haven\'t logged any catches yet. The statistics fill in on their own as you log what you catch.</string>
+    <string name="est_total">Total catches</string>
+    <string name="est_recorde">Record weight</string>
+    <string name="est_top_local">Most visited spot</string>
+    <string name="est_peixedex">Peixedex completed</string>
+    <string name="est_peixedex_sub">species unlocked</string>
+    <string name="est_por_mes">Catches per month</string>
+    <string name="est_por_mes_sub">last 6 months</string>
+    <string name="est_top_especies">Most caught species</string>
+    <string name="est_sem_especies">No catches logged.</string>
+    <string name="copia_titulo">Backup</string>
+    <string name="copia_sub">Save your licences and catches to a file (without photos) or restore them from it.</string>
+    <string name="copia_exportar">Export</string>
+    <string name="copia_importar">Import</string>
+    <string name="copia_exportada">Backup saved.</string>
+    <string name="copia_erro_exportar">Could not save the file.</string>
+    <string name="copia_erro_importar">Invalid file: not a Caderno do Pescador backup.</string>
+    <string name="copia_importada">Imported %1$d catches and %2$d licences (%3$d skipped).</string>
+
+    <string name="def_titulo">Settings</string>
+    <string name="def_aparencia">Appearance</string>
+    <string name="def_modo_escuro">Dark mode</string>
+    <string name="def_modo_escuro_sub">Turn off for high contrast in sunlight</string>
+    <string name="def_distritos">Districts on map</string>
+    <string name="def_distritos_sub">Show district boundaries and names</string>
+    <string name="def_avisos">Licence alerts</string>
+    <string name="def_antecedencia">Advance notice</string>
+    <string name="def_antecedencia_sub">The licence turns orange this many days before it ends</string>
+    <string name="def_dados">Data</string>
+    <string name="def_carregar_exemplo">Load sample data</string>
+    <string name="def_carregar_exemplo_sub">Catches, licences and partial Peixedex</string>
+    <string name="def_zero">Start from scratch</string>
+    <string name="def_zero_sub">Deletes catches, licences and user-created spots</string>
+    <string name="def_zero_confirmar">Are you sure? This deletes all your catches, licences and the spots you created.</string>
+    <string name="def_feito_exemplo">Sample data loaded</string>
+    <string name="def_feito_zero">Started from scratch</string>
+
+    <string name="perf_titulo">Edit profile</string>
+    <string name="perf_nome">Name</string>
+    <string name="perf_nome_hint">What should we call you</string>
+    <string name="perf_trocar_foto">Change photo</string>
+    <string name="perf_remover_foto">Remove photo</string>
+    <string name="cap_lugar_errado">Wrong place</string>
+    <string name="cap_lugar_errado_sub">%1$s doesn\'t occur at %2$s. Choose another spot or another species.</string>
+
+    <string name="em_breve">In development</string>
+    <string name="voltar">Back</string>
+    <string name="aviso_7_dias">7 days</string>
+    <string name="aviso_15_dias">15 days</string>
+    <string name="aviso_30_dias">30 days</string>
+    <string name="aviso_60_dias">60 days</string>
+    <string name="marcar_no_mapa">Mark on map</string>
+    <string name="mapa_instrucao">Tap the map where your spot is. You can drag and zoom before marking.</string>
+    <string name="zoom_aproximar">Zoom in</string>
+    <string name="zoom_afastar">Zoom out</string>
+    <string name="zoom_repor">Reset zoom</string>
+    <string name="localizacao_rotulo">LOCATION</string>
+    <string name="mapa_toque_marcar">Tap the map to mark</string>
+    <string name="usar_este_local">Use this spot</string>
+    <string name="editar">Edit</string>
+    <string name="local_dica_dex">Log a catch with a photo to unlock. The species is unlocked at every spot where it occurs.</string>
+    <string name="local_nota_lagostim">The red swamp crayfish is an invasive species: do not return it to the water or transport it alive.</string>
+    <string name="novo_local">New spot</string>
+    <string name="novo_nome_hint">Spot name</string>
+    <string name="novo_distrito_hint">District</string>
+    <string name="novo_localizacao_exata">Exact location</string>
+    <string name="novo_centro_distrito">District centre (approximate). Tap to mark on the map.</string>
+    <string name="marcar">Mark</string>
+    <string name="novo_tipo_hint">Type (River, Dam, Reservoir…)</string>
+    <string name="novo_tipo_agua">Water type</string>
+    <string name="agua_doce">Freshwater</string>
+    <string name="agua_salgada">Saltwater</string>
+    <string name="agua_salobra">Brackish</string>
+    <string name="novo_licencas_exigidas">Required licences</string>
+    <string name="novo_especies_presentes">Species present</string>
+    <string name="perf_foto_desc">Profile photo</string>
+    <string name="licenca_duracao_rapida">Quick duration</string>
+    <string name="cap_corrija_campo">Fix the highlighted field and try again.</string>
+    <string name="ver">View</string>
+    <string name="filtros">Filters</string>
+    <string name="zoom_portugal">View all of Portugal</string>
+    <string name="quem_e_este_peixe">Who\'s that fish?</string>
+
+    <string name="menu_item_em_desenvolvimento">%1$s: in development</string>
+    <string-array name="niveis_peixedex">
+        <item>Apprentice</item>
+        <item>Curious angler</item>
+        <item>Dedicated angler</item>
+        <item>Experienced angler</item>
+        <item>River master</item>
+        <item>River legend</item>
+    </string-array>
+    <string name="contador_capturas">catches</string>
+    <string name="contador_locais">spots</string>
+    <string name="perf_nome_padrao">Angler</string>
+    <string name="perf_erro_foto">Couldn\'t save the photo</string>
+
+    <string name="cap_sem_camara">No camera available</string>
+    <string name="cap_apagar">Delete catch</string>
+    <string name="cap_erro_copiar_foto">Couldn\'t copy the photo</string>
+    <string name="cap_nome_peso">%1$s  ·  %2$s kg</string>
+    <string name="cap_guardar_alteracoes">Save changes</string>
+    <string name="cap_cancelar_edicao">Cancel editing</string>
+    <string name="cap_atualizada">Catch updated</string>
+    <string name="cap_detalhe_isco">Bait: %1$s</string>
+
+    <string name="agua_tipo_doce">Freshwater</string>
+    <string name="agua_tipo_salgada">Saltwater</string>
+    <string name="agua_tipo_salobra">Brackish water</string>
+
+    <string name="local_meta">%1$s · %2$s district</string>
+    <string name="local_distrito_concelho">District · Municipality</string>
+    <string name="local_rio_bacia">River / basin</string>
+    <string name="local_ponto_referencia">Reference point</string>
+    <string name="local_coordenadas">Coordinates</string>
+    <string name="local_coordenadas_aprox">Coordinates (approximate)</string>
+    <string name="pt_norte">N</string>
+    <string name="pt_sul">S</string>
+    <string name="pt_este">E</string>
+    <string name="pt_oeste">W</string>
+    <string name="local_tab_peixedex">Peixedex %1$d/%2$d</string>
+    <string name="local_desbloqueadas_aqui">%1$d of %2$d unlocked here</string>
+    <string name="local_especies_resumo">Species at this spot · %1$s</string>
+    <string name="local_em_ordem">%1$d of %2$d in order</string>
+    <string name="local_pode_pescar">You can fish here</string>
+    <string name="local_pode_atencao">You can fish, but beware</string>
+    <string name="local_licenca_a_expirar">You have everything, but a licence expires soon.</string>
+    <string name="local_nao_pode_pescar">You can\'t fish at this spot until all required licences are valid.</string>
+
+    <string name="licenca_serve">Works at spots that require this type: %1$s.</string>
+    <string name="licenca_serve_nao_res">Works at spots that require this type (as a non-resident, it covers inland waters and sea): %1$s.</string>
+    <string name="licenca_serve_nenhum">none of your spots</string>
+    <string name="duracao_1_dia">1 day</string>
+    <string name="duracao_1_mes">1 month</string>
+    <string name="duracao_3_meses">3 months</string>
+    <string name="duracao_1_ano">1 year</string>
+    <string name="licenca_erro_sem_fim">Enter the end date</string>
+    <string name="licenca_erro_fim_antes">Must be after the start</string>
+    <string name="licenca_erro_mais_1_ano">A licence can\'t last more than 1 year</string>
+    <string name="licenca_adicionada">Licence added</string>
+    <string name="licenca_atualizada">Licence updated</string>
+    <string name="licenca_apagada">Licence deleted</string>
+    <string name="licenca_apagar_aviso">%1$s will no longer count for your spots.</string>
+    <string name="estado_valida">Valid</string>
+    <string name="estado_expirada">Expired</string>
+    <string name="expira_hoje">Expires today</string>
+    <string name="a_expirar_em">Expiring in %1$s</string>
+    <string name="expirada_ha">Expired %1$s ago</string>
+    <string name="exigida_em">Required at %1$s</string>
+    <string name="numero_abrev">No. %1$s</string>
+    <string name="exig_emitida_por">Issued by %1$s</string>
+    <string name="exig_coberta_nacional">covered by the national licence</string>
+    <string name="exig_nao_tem">You don\'t have this licence</string>
+    <string name="exig_expirada_a">Expired on %1$s (%2$s ago)</string>
+    <string name="exig_valida_expira">Valid until %1$s · expires in %2$s</string>
+    <string name="exig_valida_ate">Valid until %1$s</string>
+    <string name="exig_renovei">Renewed · update dates</string>
+
+    <string name="novo_pesqueiro">New fishing spot</string>
+    <string name="editar_pesqueiro">Edit fishing spot</string>
+    <string name="novo_erro_nome">Enter the spot name</string>
+    <string name="novo_erro_licenca">Choose at least one required licence</string>
+    <string name="novo_ref_marcado">Marked on map</string>
+    <string name="novo_ref_aproximada">Approximate coordinates (district centre)</string>
+    <string name="novo_guardado">Spot saved</string>
+    <string name="novo_atualizado">Spot updated</string>
+    <string name="novo_marcado">Marked: %1$s</string>
+    <string name="novo_apagar">Delete fishing spot</string>
+    <string name="novo_eliminado">“%1$s” deleted</string>
+    <string name="novo_erro_apagar_capturas">This spot has logged catches. Delete them first to be able to remove it.</string>
+
+    <string name="partilha_titulo_captura">🎣 My catch!</string>
+    <string name="partilha_especie">🐟 %1$s</string>
+    <string name="partilha_peso">⚖️ %1$s kg</string>
+    <string name="partilha_local">📍 %1$s</string>
+    <string name="partilha_data">📅 %1$s</string>
+    <string name="partilha_isco">🪝 Bait: %1$s</string>
+    <string name="partilha_tamanho">Size: %1$s</string>
+    <string name="partilha_epoca">Season: %1$s</string>
+    <string name="partilha_iscos">Baits: %1$s</string>
+    <string name="partilha_assinatura">— Caderno do Pescador</string>
+    <string name="partilha_assinatura_dex">— Caderno do Pescador · Peixedex</string>
+
+    <string name="ficha_chip_numero">No.%1$d %2$s</string>
+    <string name="peixedex_progresso">%1$d of %2$d species</string>
+    <string name="peixedex_progresso_local">%1$d of %2$d species at this spot</string>
+    <string name="numero_dex">No. %1$03d</string>
+    <string name="dex_desconhecido">\?\?\?</string>
+    <string name="dex_por_descobrir">To discover</string>
+    <string name="guia_todas">All</string>
+    <string name="guia_crustaceos">Crustaceans</string>
+
+    <string name="ordem_nome">Name (A–Z)</string>
+    <string name="ordem_licenca">Licence (most urgent)</string>
+    <string name="ordem_visitas">Most visited</string>
+    <string name="pagina_info">Page %1$d of %2$d · %3$d–%4$d of %5$d</string>
+    <string name="pesq_licenca_valida">● Valid licence</string>
+    <string name="pesq_licenca_expira_hoje">● Licence expires today</string>
+    <string name="pesq_licenca_expira_em">● Licence expires in %1$s</string>
+    <string name="pesq_falta_licenca">● Licence missing</string>
+    <string name="pesq_licenca_expirada">● Licence expired</string>
+    <string name="legenda_tem">You have the licences</string>
+    <string name="legenda_falta">Licence missing</string>
+
+    <string name="mapa_espanha">SPAIN</string>
+    <string name="mapa_oceano">ATLANTIC OCEAN</string>
+
+    <string name="notif_canal_descricao">Alerts for licences about to expire</string>
+    <string name="notif_titulo">Licence expiring in %1$s</string>
+    <string name="notif_texto">%1$s · valid until %2$s. Tap to renew.</string>
+
+    <string name="est_sem_registos">no records yet</string>
+    <string name="est_registadas">logged by you</string>
+    <string name="kg_valor">%1$s kg</string>
+    <string name="est_x_de_y">%1$d of %2$d</string>
+
+    <string name="grupo_peixe">Fish</string>
+    <string name="grupo_crustaceo">Crustacean</string>
+    <string name="tipo_local_rio">River</string>
+    <string name="tipo_local_barragem">Dam</string>
+    <string name="tipo_local_albufeira">Reservoir</string>
+    <string name="tipo_local_praia">Beach</string>
+    <string name="tipo_local_falesia">Cliff</string>
+    <string name="tipo_local_estuario">Estuary</string>
+    <string name="tipo_local_lagoa">Lagoon</string>
+    <string name="tipo_local_margem">River bank</string>
+    <string name="tipo_local_outro">Other</string>
+    <string name="def_idioma">Language</string>
+    <string name="def_idioma_sub">App language</string>
+    <string name="idioma_automatico">Automatic (system language)</string>
+
+    <string-array name="meses_abrev">
+        <item>Jan</item><item>Feb</item><item>Mar</item><item>Apr</item><item>May</item><item>Jun</item>
+        <item>Jul</item><item>Aug</item><item>Sep</item><item>Oct</item><item>Nov</item><item>Dec</item>
+    </string-array>
+
+    <plurals name="n_dias">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="n_dias_restantes">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+    <plurals name="n_pesqueiros">
+        <item quantity="one">%d fishing spot</item>
+        <item quantity="other">%d fishing spots</item>
+    </plurals>
+    <plurals name="n_peixes">
+        <item quantity="one">%d fish</item>
+        <item quantity="other">%d fish</item>
+    </plurals>
+    <plurals name="n_crustaceos">
+        <item quantity="one">%d crustacean</item>
+        <item quantity="other">%d crustaceans</item>
+    </plurals>
+    <plurals name="n_especies">
+        <item quantity="one">%d species</item>
+        <item quantity="other">%d species</item>
+    </plurals>
+    <plurals name="n_visitas">
+        <item quantity="one">%d visit</item>
+        <item quantity="other">%d visits</item>
+    </plurals>
+    <plurals name="local_licencas_validas">
+        <item quantity="one">You have the required licence and it is valid.</item>
+        <item quantity="other">You have all %d required licences and they are valid.</item>
+    </plurals>
+    <plurals name="local_licencas_em_falta">
+        <item quantity="one">%d licence missing</item>
+        <item quantity="other">%d licences missing</item>
+    </plurals>
+    <plurals name="peixedex_faltam">
+        <item quantity="one">%d species left to complete the collection.</item>
+        <item quantity="other">%d species left to complete the collection.</item>
+    </plurals>
+    <plurals name="peixedex_faltam_local">
+        <item quantity="one">%d species left to complete this spot.</item>
+        <item quantity="other">%d species left to complete this spot.</item>
+    </plurals>
+    <string name="conq_titulo">Achievements</string>
+    <string name="conq_progresso">%1$d of %2$d achievements</string>
+    <string name="conq_nova">Achievement unlocked: %1$s</string>
+    <string name="hist_pesquisa">Search by species, place or date</string>
+    <string name="hist_sem_resultados">No catch matches your search.</string>
+    <string name="conq_primeira_t">First catch</string>
+    <string name="conq_primeira_d">Log your first catch.</string>
+    <string name="conq_dez_t">Ten catches</string>
+    <string name="conq_dez_d">Log 10 catches.</string>
+    <string name="conq_assiduo_t">Regular angler</string>
+    <string name="conq_assiduo_d">Log 25 catches.</string>
+    <string name="conq_esp5_t">Collector</string>
+    <string name="conq_esp5_d">Unlock 5 species in the Peixedex.</string>
+    <string name="conq_esp10_t">Naturalist</string>
+    <string name="conq_esp10_d">Unlock 10 species in the Peixedex.</string>
+    <string name="conq_todas_t">Complete Peixedex</string>
+    <string name="conq_todas_d">Unlock every species.</string>
+    <string name="conq_graudo_t">Big fish</string>
+    <string name="conq_graudo_d">Catch a fish of 3 kg or more.</string>
+    <string name="conq_gigante_t">Giant fish</string>
+    <string name="conq_gigante_d">Catch a fish of 10 kg or more.</string>
+    <string name="conq_explorador_t">Explorer</string>
+    <string name="conq_explorador_d">Fish at 3 different places.</string>
+    <string name="conq_fotografo_t">Photographer</string>
+    <string name="conq_fotografo_d">Log 5 catches with a photo.</string>
+    <string name="conq_ver_todas">See all</string>
+    <string name="conq_feita">Done</string>
+    <string name="conq_sub">Earn them by fishing and completing the Peixedex.</string>
+</resources>

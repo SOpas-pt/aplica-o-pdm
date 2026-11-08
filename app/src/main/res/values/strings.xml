@@ -1,0 +1,464 @@
+<resources>
+    <string name="app_name">Caderno do Pescador</string>
+
+    <!-- barra inferior -->
+    <string name="nav_pesqueiros">Pesqueiros</string>
+    <string name="nav_peixedex">Peixedex</string>
+    <string name="nav_capturas">Capturas</string>
+    <string name="nav_licencas">Licenças</string>
+    <string name="nav_estatisticas">Estatísticas</string>
+
+    <!-- menu lateral -->
+    <string name="menu_guia">Guia de espécies</string>
+    <string name="menu_perfil">Editar perfil</string>
+    <string name="menu_definicoes">Definições</string>
+    <string name="menu_ajuda">Ajuda e sobre</string>
+    <string name="abrir_menu">Abrir menu</string>
+    <string name="fechar_menu">Fechar menu</string>
+    <string name="alternar_tema">Modo claro / escuro</string>
+
+    <!-- pesqueiros -->
+    <string name="pesquisar_hint">Nome do local, distrito ou peixe…</string>
+    <string name="ordenar">Ordenar</string>
+    <string name="chip_achiga">Achigã</string>
+    <string name="chip_valida">Licença válida</string>
+    <string name="chip_expirar">A expirar</string>
+    <string name="vista_lista">Lista</string>
+    <string name="vista_mapa">Mapa</string>
+    <string name="sem_resultados">Sem resultados</string>
+    <string name="sem_resultados_txt">Experimente outro nome ou espécie, ou limpe os filtros.</string>
+    <string name="limpar_filtros">Limpar filtros</string>
+    <string name="mapa_dica">Toque numa bola para ver o local · pinça ou duplo toque para zoom</string>
+    <string name="pagina_anterior">Página anterior</string>
+    <string name="pagina_seguinte">Página seguinte</string>
+
+    <!-- local -->
+    <string name="info_local">Informação do local</string>
+    <string name="tab_especies">O que pode pescar</string>
+    <string name="onde_fica">Onde fica</string>
+    <string name="licencas_necessarias">Licenças necessárias</string>
+    <string name="ver_no_mapa">Ver no mapa</string>
+    <string name="gps_em_breve">GPS · em breve</string>
+    <string name="levar_licenca">Leve sempre consigo a licença (em papel ou digital) e um documento de identificação.</string>
+    <string name="aviso_indicativo">Espécies e licenças indicativas: confirme sempre junto do ICNF ou da DGRM.</string>
+    <string name="registar_captura">Registar captura</string>
+
+    <!-- licenças -->
+    <string name="minhas_licencas">As minhas licenças</string>
+    <string name="minhas_licencas_sub">As licenças de pesca que tem</string>
+    <string name="adicionar_licenca">Adicionar licença</string>
+    <string name="editar_licenca">Editar licença</string>
+    <string name="apagar_licenca">Apagar licença</string>
+    <string name="validas">Válidas</string>
+    <string name="a_expirar">A expirar</string>
+    <string name="expiradas">Expiradas</string>
+    <string name="sem_licencas">Ainda não adicionou licenças</string>
+    <string name="sem_licencas_txt">Adicione as licenças que tem. A app passa a mostrar a verde os pesqueiros onde pode pescar e avisa antes de expirarem.</string>
+    <string name="licencas_em_falta">Licenças que não tem</string>
+    <string name="ja_tenho_adicionar">Já tenho · adicionar</string>
+    <string name="tipo_licenca">Tipo de licença</string>
+    <string name="numero_licenca">Número da licença (opcional)</string>
+    <string name="inicio">Início</string>
+    <string name="valida_ate">Válida até</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="confirmar_eliminar">Tem a certeza que deseja eliminar este registo?</string>
+
+    <!-- capturas -->
+    <string name="capturas_titulo">Capturas</string>
+    <string name="capturas_nova">Nova</string>
+    <string name="capturas_historico">Histórico</string>
+    <string name="cap_pesqueiro">Pesqueiro</string>
+    <string name="cap_especie">Espécie</string>
+    <string name="cap_peso">Peso (kg)</string>
+    <string name="cap_data">Data</string>
+    <string name="cap_isco">Isco</string>
+    <string name="cap_foto">Fotografia</string>
+    <string name="cap_add_foto">Adicionar fotografia</string>
+    <string name="cap_foto_desbloqueia">(Desbloqueia a espécie)</string>
+    <string name="cap_foto_ja">(Espécie já desbloqueada)</string>
+    <string name="cap_foto_sub">Tirar foto ou escolher da galeria</string>
+    <string name="cap_foto_tirar">Tirar fotografia</string>
+    <string name="cap_foto_galeria">Escolher da galeria</string>
+    <string name="cap_foto_remover">Remover fotografia</string>
+    <string name="cap_foto_adicionada">Foto adicionada</string>
+    <string name="cap_guardar">Guardar captura</string>
+    <string name="cap_erro_peso_vazio">Não foi possível guardar: indique o peso</string>
+    <string name="cap_erro_peso_invalido">Valor inválido (0,01–99 kg)</string>
+    <string name="cap_sem_capturas">Ainda sem capturas</string>
+    <string name="cap_sem_capturas_txt">Registe a primeira captura no separador «Nova».</string>
+    <string name="cap_recorde">Recorde</string>
+    <string name="cap_sem_fotografia">Sem fotografia</string>
+    <string name="cap_desbloqueou">Nova espécie desbloqueada!</string>
+    <string name="cap_desbloqueou_sub">A %1$s fica desbloqueada na sua Peixedex em todos os locais onde existe.</string>
+    <string name="cap_guardada">Captura guardada</string>
+    <string name="cap_sem_app_sms">Sem aplicação de SMS disponível</string>
+    <string name="cap_sem_whatsapp">WhatsApp não encontrado</string>
+
+    <!-- peixedex -->
+    <string name="peixedex_sub">A sua coleção · desbloquear uma espécie vale em todos os locais</string>
+    <string name="peixedex_ver_de">Ver a Peixedex de</string>
+    <string name="peixedex_todas_zonas">Todas as zonas</string>
+    <string name="peixedex_proximo">Próximo desafio</string>
+    <string name="peixedex_proximo_txt">Fotografe um %1$s para o desbloquear.</string>
+    <string name="peixedex_ver_local">Ver o local</string>
+    <string name="peixedex_guia">Guia de espécies</string>
+    <string name="peixedex_guia_sub">%1$d espécies de água doce, salgada e salobra · que isco usar</string>
+    <string name="peixedex_completa">Coleção completa! Parabéns, pescador.</string>
+    <string name="peixedex_completa_local">Já desbloqueou todas as espécies deste local!</string>
+
+    <!-- ficha de espécie -->
+    <string name="ficha_titulo">Ficha de espécie</string>
+    <string name="ficha_desbloqueada">Desbloqueada</string>
+    <string name="ficha_quem">Quem é este peixe?</string>
+    <string name="ficha_por_descobrir">Espécie por descobrir</string>
+    <string name="ficha_por_descobrir_sub">Nº %1$s · Fotografe um exemplar para revelar</string>
+    <string name="ficha_habitat">Habitat</string>
+    <string name="ficha_habitat_pista">Pista · habitat</string>
+    <string name="ficha_epoca">Melhor época</string>
+    <string name="ficha_tamanho">Tamanho médio</string>
+    <string name="ficha_iscos">Iscos recomendados</string>
+    <string name="ficha_identificar">Como identificar</string>
+    <string name="ficha_comparar">Comparar espécies</string>
+    <string name="ficha_comparar_sub">como distinguir</string>
+    <string name="ficha_onde_pescar">Onde pode pescar</string>
+    <string name="ficha_partilhar">Partilhar (WhatsApp/SMS)</string>
+    <string name="ficha_registar">Registar nova captura</string>
+    <string name="ficha_fotografar">Fotografar para desbloquear</string>
+
+    <!-- partilha -->
+    <string name="partilhar_captura">Partilhar captura</string>
+    <string name="btn_whatsapp">WhatsApp</string>
+    <string name="btn_sms">SMS</string>
+    <string name="btn_fechar">Fechar</string>
+
+    <!-- estatísticas -->
+    <string name="est_sub">O seu resumo de pesca · calculado a partir das suas capturas</string>
+    <string name="est_sem_capturas">Ainda não registou capturas. As estatísticas enchem-se sozinhas à medida que regista o que pesca.</string>
+    <string name="est_total">Total de capturas</string>
+    <string name="est_recorde">Peso recorde</string>
+    <string name="est_top_local">Pesqueiro mais visitado</string>
+    <string name="est_peixedex">Peixedex concluída</string>
+    <string name="est_peixedex_sub">espécies desbloqueadas</string>
+    <string name="est_por_mes">Capturas por mês</string>
+    <string name="est_por_mes_sub">últimos 6 meses</string>
+    <string name="est_top_especies">Espécies mais capturadas</string>
+    <string name="est_sem_especies">Sem capturas registadas.</string>
+    <string name="copia_titulo">Cópia de segurança</string>
+    <string name="copia_sub">Guarda as tuas licenças e capturas num ficheiro (sem fotografias) ou repõe-nas a partir dele.</string>
+    <string name="copia_exportar">Exportar</string>
+    <string name="copia_importar">Importar</string>
+    <string name="copia_exportada">Cópia guardada.</string>
+    <string name="copia_erro_exportar">Não foi possível guardar o ficheiro.</string>
+    <string name="copia_erro_importar">Ficheiro inválido: não é uma cópia do Caderno do Pescador.</string>
+    <string name="copia_importada">Importadas %1$d capturas e %2$d licenças (%3$d ignoradas).</string>
+
+    <!-- definições -->
+    <string name="def_titulo">Definições</string>
+    <string name="def_aparencia">Aparência</string>
+    <string name="def_modo_escuro">Modo escuro</string>
+    <string name="def_modo_escuro_sub">Desligue para alto contraste ao sol</string>
+    <string name="def_distritos">Distritos no mapa</string>
+    <string name="def_distritos_sub">Mostrar limites e nomes dos distritos</string>
+    <string name="def_avisos">Avisos de licença</string>
+    <string name="def_antecedencia">Antecedência</string>
+    <string name="def_antecedencia_sub">A licença fica a laranja a partir destes dias antes do fim</string>
+    <string name="def_dados">Dados</string>
+    <string name="def_carregar_exemplo">Carregar dados de exemplo</string>
+    <string name="def_carregar_exemplo_sub">Capturas, licenças e Peixedex parcial</string>
+    <string name="def_zero">Começar do zero</string>
+    <string name="def_zero_sub">Apaga capturas, licenças e locais do utilizador</string>
+    <string name="def_zero_confirmar">Tem a certeza? Isto apaga todas as suas capturas, licenças e locais criados.</string>
+    <string name="def_feito_exemplo">Dados de exemplo carregados</string>
+    <string name="def_feito_zero">Começou do zero</string>
+
+    <!-- perfil -->
+    <string name="perf_titulo">Editar perfil</string>
+    <string name="perf_nome">Nome</string>
+    <string name="perf_nome_hint">Como quer ser tratado</string>
+    <string name="perf_trocar_foto">Trocar foto</string>
+    <string name="perf_remover_foto">Remover foto</string>
+    <string name="cap_lugar_errado">Lugar errado</string>
+    <string name="cap_lugar_errado_sub">%1$s não existe em %2$s. Escolha outro local ou outra espécie.</string>
+
+    <!-- em construção (fases seguintes) -->
+    <string name="em_breve">Em desenvolvimento</string>
+    <string name="voltar">Voltar</string>
+    <string name="aviso_7_dias">7 dias</string>
+    <string name="aviso_15_dias">15 dias</string>
+    <string name="aviso_30_dias">30 dias</string>
+    <string name="aviso_60_dias">60 dias</string>
+    <string name="marcar_no_mapa">Marcar no mapa</string>
+    <string name="mapa_instrucao">Toque no mapa onde fica o seu local. Pode arrastar e aproximar antes de marcar.</string>
+    <string name="zoom_aproximar">Aproximar</string>
+    <string name="zoom_afastar">Afastar</string>
+    <string name="zoom_repor">Repor zoom</string>
+    <string name="localizacao_rotulo">LOCALIZAÇÃO</string>
+    <string name="mapa_toque_marcar">Toque no mapa para marcar</string>
+    <string name="usar_este_local">Usar este local</string>
+    <string name="editar">Editar</string>
+    <string name="local_dica_dex">Registe uma captura com fotografia para desbloquear. A espécie fica desbloqueada em todos os locais onde existe.</string>
+    <string name="local_nota_lagostim">O lagostim é uma espécie invasora: não o devolva à água nem o transporte vivo.</string>
+    <string name="novo_local">Novo local</string>
+    <string name="novo_nome_hint">Nome do local</string>
+    <string name="novo_distrito_hint">Distrito</string>
+    <string name="novo_localizacao_exata">Localização exata</string>
+    <string name="novo_centro_distrito">Centro do distrito (aproximado). Toque para marcar no mapa.</string>
+    <string name="marcar">Marcar</string>
+    <string name="novo_tipo_hint">Tipo (Rio, Barragem, Albufeira…)</string>
+    <string name="novo_tipo_agua">Tipo de água</string>
+    <string name="agua_doce">Água doce</string>
+    <string name="agua_salgada">Salgada</string>
+    <string name="agua_salobra">Salobra</string>
+    <string name="novo_licencas_exigidas">Licenças exigidas</string>
+    <string name="novo_especies_presentes">Espécies presentes</string>
+    <string name="perf_foto_desc">Fotografia de perfil</string>
+    <string name="licenca_duracao_rapida">Duração rápida</string>
+    <string name="cap_corrija_campo">Corrija o campo assinalado e volte a tentar.</string>
+    <string name="ver">Ver</string>
+    <string name="filtros">Filtros</string>
+    <string name="zoom_portugal">Ver Portugal inteiro</string>
+    <string name="quem_e_este_peixe">Quem é este peixe?</string>
+
+    <!-- menu lateral / perfil -->
+    <string name="menu_item_em_desenvolvimento">%1$s: em desenvolvimento</string>
+    <!-- títulos do perfil: 0, 3, 6, 10, 15 e 20 espécies desbloqueadas -->
+    <string-array name="niveis_peixedex">
+        <item>Aprendiz</item>
+        <item>Pescador curioso</item>
+        <item>Pescador dedicado</item>
+        <item>Pescador experiente</item>
+        <item>Mestre do rio</item>
+        <item>Lenda do rio</item>
+    </string-array>
+    <string name="contador_capturas">capturas</string>
+    <string name="contador_locais">locais</string>
+    <string name="perf_nome_padrao">Pescador</string>
+    <string name="perf_erro_foto">Não foi possível guardar a foto</string>
+
+    <!-- capturas -->
+    <string name="cap_sem_camara">Sem câmara disponível</string>
+    <string name="cap_apagar">Apagar captura</string>
+    <string name="cap_erro_copiar_foto">Não foi possível copiar a fotografia</string>
+    <string name="cap_nome_peso">%1$s  ·  %2$s kg</string>
+    <string name="cap_guardar_alteracoes">Guardar alterações</string>
+    <string name="cap_cancelar_edicao">Cancelar edição</string>
+    <string name="cap_atualizada">Captura atualizada</string>
+    <string name="cap_detalhe_isco">Isco: %1$s</string>
+
+    <!-- tipos de água -->
+    <string name="agua_tipo_doce">Água doce</string>
+    <string name="agua_tipo_salgada">Água salgada</string>
+    <string name="agua_tipo_salobra">Água salobra</string>
+
+    <!-- ecrã do local -->
+    <string name="local_meta">%1$s · distrito de %2$s</string>
+    <string name="local_distrito_concelho">Distrito · Concelho</string>
+    <string name="local_rio_bacia">Rio / bacia</string>
+    <string name="local_ponto_referencia">Ponto de referência</string>
+    <string name="local_coordenadas">Coordenadas</string>
+    <string name="local_coordenadas_aprox">Coordenadas (aproximadas)</string>
+    <string name="pt_norte">N</string>
+    <string name="pt_sul">S</string>
+    <string name="pt_este">E</string>
+    <string name="pt_oeste">O</string>
+    <string name="local_tab_peixedex">Peixedex %1$d/%2$d</string>
+    <string name="local_desbloqueadas_aqui">%1$d de %2$d desbloqueadas aqui</string>
+    <string name="local_especies_resumo">Espécies deste local · %1$s</string>
+    <string name="local_em_ordem">%1$d de %2$d em ordem</string>
+    <string name="local_pode_pescar">Pode pescar aqui</string>
+    <string name="local_pode_atencao">Pode pescar, mas atenção</string>
+    <string name="local_licenca_a_expirar">Tem tudo, mas há uma licença a expirar em breve.</string>
+    <string name="local_nao_pode_pescar">Não pode pescar neste local até ter todas as licenças válidas.</string>
+
+    <!-- licenças -->
+    <string name="licenca_serve">Serve nos pesqueiros que exigem este tipo: %1$s.</string>
+    <string name="licenca_serve_nao_res">Serve nos pesqueiros que exigem este tipo (como não residente, cobre águas interiores e mar): %1$s.</string>
+    <string name="licenca_serve_nenhum">nenhum dos seus pesqueiros</string>
+    <string name="duracao_1_dia">1 dia</string>
+    <string name="duracao_1_mes">1 mês</string>
+    <string name="duracao_3_meses">3 meses</string>
+    <string name="duracao_1_ano">1 ano</string>
+    <string name="licenca_erro_sem_fim">Indique a data de fim</string>
+    <string name="licenca_erro_fim_antes">Tem de ser depois do início</string>
+    <string name="licenca_erro_mais_1_ano">A licença não pode durar mais de 1 ano</string>
+    <string name="licenca_adicionada">Licença adicionada</string>
+    <string name="licenca_atualizada">Licença atualizada</string>
+    <string name="licenca_apagada">Licença apagada</string>
+    <string name="licenca_apagar_aviso">%1$s deixa de contar nos seus pesqueiros.</string>
+    <string name="estado_valida">Válida</string>
+    <string name="estado_expirada">Expirada</string>
+    <string name="expira_hoje">Expira hoje</string>
+    <string name="a_expirar_em">A expirar em %1$s</string>
+    <string name="expirada_ha">Expirada há %1$s</string>
+    <string name="exigida_em">Exigida em %1$s</string>
+    <string name="numero_abrev">Nº %1$s</string>
+    <string name="exig_emitida_por">Emitida por %1$s</string>
+    <string name="exig_coberta_nacional">coberta pela licença nacional</string>
+    <string name="exig_nao_tem">Não tem esta licença</string>
+    <string name="exig_expirada_a">Expirada a %1$s (há %2$s)</string>
+    <string name="exig_valida_expira">Válida até %1$s · expira em %2$s</string>
+    <string name="exig_valida_ate">Válida até %1$s</string>
+    <string name="exig_renovei">Renovei · atualizar datas</string>
+
+    <!-- novo / editar pesqueiro -->
+    <string name="novo_pesqueiro">Novo pesqueiro</string>
+    <string name="editar_pesqueiro">Editar pesqueiro</string>
+    <string name="novo_erro_nome">Indique o nome do local</string>
+    <string name="novo_erro_licenca">Escolha pelo menos uma licença exigida</string>
+    <string name="novo_ref_marcado">Marcado no mapa</string>
+    <string name="novo_ref_aproximada">Coordenadas aproximadas (centro do distrito)</string>
+    <string name="novo_guardado">Local guardado</string>
+    <string name="novo_atualizado">Local atualizado</string>
+    <string name="novo_marcado">Marcado: %1$s</string>
+    <string name="novo_apagar">Apagar pesqueiro</string>
+    <string name="novo_eliminado">«%1$s» eliminado</string>
+    <string name="novo_erro_apagar_capturas">Este local tem capturas registadas. Apague-as primeiro para o poder eliminar.</string>
+
+    <!-- partilha -->
+    <string name="partilha_titulo_captura">🎣 A minha captura!</string>
+    <string name="partilha_especie">🐟 %1$s</string>
+    <string name="partilha_peso">⚖️ %1$s kg</string>
+    <string name="partilha_local">📍 %1$s</string>
+    <string name="partilha_data">📅 %1$s</string>
+    <string name="partilha_isco">🪝 Isco: %1$s</string>
+    <string name="partilha_tamanho">Tamanho: %1$s</string>
+    <string name="partilha_epoca">Época: %1$s</string>
+    <string name="partilha_iscos">Iscos: %1$s</string>
+    <string name="partilha_assinatura">— Caderno do Pescador</string>
+    <string name="partilha_assinatura_dex">— Caderno do Pescador · Peixedex</string>
+
+    <!-- peixedex / ficha / guia -->
+    <string name="ficha_chip_numero">Nº%1$d %2$s</string>
+    <string name="peixedex_progresso">%1$d de %2$d espécies</string>
+    <string name="peixedex_progresso_local">%1$d de %2$d espécies neste local</string>
+    <string name="numero_dex">Nº %1$03d</string>
+    <string name="dex_desconhecido">\?\?\?</string>
+    <string name="dex_por_descobrir">Por descobrir</string>
+    <string name="guia_todas">Todas</string>
+    <string name="guia_crustaceos">Crustáceos</string>
+
+    <!-- pesqueiros -->
+    <string name="ordem_nome">Nome (A–Z)</string>
+    <string name="ordem_licenca">Licença (mais urgente)</string>
+    <string name="ordem_visitas">Mais visitados</string>
+    <string name="pagina_info">Página %1$d de %2$d · %3$d–%4$d de %5$d</string>
+    <string name="pesq_licenca_valida">● Licença válida</string>
+    <string name="pesq_licenca_expira_hoje">● Licença expira hoje</string>
+    <string name="pesq_licenca_expira_em">● Licença expira em %1$s</string>
+    <string name="pesq_falta_licenca">● Falta licença</string>
+    <string name="pesq_licenca_expirada">● Licença expirada</string>
+    <string name="legenda_tem">Tem as licenças</string>
+    <string name="legenda_falta">Falta licença</string>
+
+    <!-- mapa -->
+    <string name="mapa_espanha">ESPANHA</string>
+    <string name="mapa_oceano">OCEANO ATLÂNTICO</string>
+
+    <!-- notificações -->
+    <string name="notif_canal_descricao">Avisos de licenças prestes a expirar</string>
+    <string name="notif_titulo">Licença a expirar em %1$s</string>
+    <string name="notif_texto">%1$s · válida até %2$s. Toque para renovar.</string>
+
+    <!-- estatísticas -->
+    <string name="est_sem_registos">ainda sem registos</string>
+    <string name="est_registadas">registadas por si</string>
+    <string name="kg_valor">%1$s kg</string>
+    <string name="est_x_de_y">%1$d de %2$d</string>
+
+    <!-- grupos, tipos de local, idioma -->
+    <string name="grupo_peixe">Peixe</string>
+    <string name="grupo_crustaceo">Crustáceo</string>
+    <string name="tipo_local_rio">Rio</string>
+    <string name="tipo_local_barragem">Barragem</string>
+    <string name="tipo_local_albufeira">Albufeira</string>
+    <string name="tipo_local_praia">Praia</string>
+    <string name="tipo_local_falesia">Falésia</string>
+    <string name="tipo_local_estuario">Estuário</string>
+    <string name="tipo_local_lagoa">Lagoa</string>
+    <string name="tipo_local_margem">Rio - margem</string>
+    <string name="tipo_local_outro">Outro</string>
+    <string name="def_idioma">Idioma</string>
+    <string name="def_idioma_sub">Língua da aplicação</string>
+    <string name="idioma_automatico">Automático (idioma do sistema)</string>
+
+    <string-array name="meses_abrev">
+        <item>Jan</item><item>Fev</item><item>Mar</item><item>Abr</item><item>Mai</item><item>Jun</item>
+        <item>Jul</item><item>Ago</item><item>Set</item><item>Out</item><item>Nov</item><item>Dez</item>
+    </string-array>
+
+    <!-- plurais -->
+    <plurals name="n_dias">
+        <item quantity="one">%d dia</item>
+        <item quantity="other">%d dias</item>
+    </plurals>
+    <plurals name="n_dias_restantes">
+        <item quantity="one">%d dia restante</item>
+        <item quantity="other">%d dias restantes</item>
+    </plurals>
+    <plurals name="n_pesqueiros">
+        <item quantity="one">%d pesqueiro</item>
+        <item quantity="other">%d pesqueiros</item>
+    </plurals>
+    <plurals name="n_peixes">
+        <item quantity="one">%d peixe</item>
+        <item quantity="other">%d peixes</item>
+    </plurals>
+    <plurals name="n_crustaceos">
+        <item quantity="one">%d crustáceo</item>
+        <item quantity="other">%d crustáceos</item>
+    </plurals>
+    <plurals name="n_especies">
+        <item quantity="one">%d espécie</item>
+        <item quantity="other">%d espécies</item>
+    </plurals>
+    <plurals name="n_visitas">
+        <item quantity="one">%d visita</item>
+        <item quantity="other">%d visitas</item>
+    </plurals>
+    <plurals name="local_licencas_validas">
+        <item quantity="one">Tem a licença necessária e está válida.</item>
+        <item quantity="other">Tem as %d licenças necessárias e estão válidas.</item>
+    </plurals>
+    <plurals name="local_licencas_em_falta">
+        <item quantity="one">Falta %d licença</item>
+        <item quantity="other">Faltam %d licenças</item>
+    </plurals>
+    <plurals name="peixedex_faltam">
+        <item quantity="one">Falta %d espécie para completar a coleção.</item>
+        <item quantity="other">Faltam %d espécies para completar a coleção.</item>
+    </plurals>
+    <plurals name="peixedex_faltam_local">
+        <item quantity="one">Falta %d espécie para completar este local.</item>
+        <item quantity="other">Faltam %d espécies para completar este local.</item>
+    </plurals>
+    <string name="conq_titulo">Conquistas</string>
+    <string name="conq_progresso">%1$d de %2$d conquistas</string>
+    <string name="conq_nova">Conquista desbloqueada: %1$s</string>
+    <string name="hist_pesquisa">Pesquisar por espécie, local ou data</string>
+    <string name="hist_sem_resultados">Nenhuma captura corresponde à pesquisa.</string>
+    <string name="conq_primeira_t">Primeira captura</string>
+    <string name="conq_primeira_d">Regista a tua primeira captura.</string>
+    <string name="conq_dez_t">Dez capturas</string>
+    <string name="conq_dez_d">Regista 10 capturas.</string>
+    <string name="conq_assiduo_t">Pescador assíduo</string>
+    <string name="conq_assiduo_d">Regista 25 capturas.</string>
+    <string name="conq_esp5_t">Colecionador</string>
+    <string name="conq_esp5_d">Desbloqueia 5 espécies na Peixedex.</string>
+    <string name="conq_esp10_t">Naturalista</string>
+    <string name="conq_esp10_d">Desbloqueia 10 espécies na Peixedex.</string>
+    <string name="conq_todas_t">Peixedex completa</string>
+    <string name="conq_todas_d">Desbloqueia todas as espécies.</string>
+    <string name="conq_graudo_t">Peixe graúdo</string>
+    <string name="conq_graudo_d">Captura um peixe com 3 kg ou mais.</string>
+    <string name="conq_gigante_t">Peixe gigante</string>
+    <string name="conq_gigante_d">Captura um peixe com 10 kg ou mais.</string>
+    <string name="conq_explorador_t">Explorador</string>
+    <string name="conq_explorador_d">Pesca em 3 locais diferentes.</string>
+    <string name="conq_fotografo_t">Fotógrafo</string>
+    <string name="conq_fotografo_d">Regista 5 capturas com fotografia.</string>
+    <string name="conq_ver_todas">Ver todas</string>
+    <string name="conq_feita">Feita</string>
+    <string name="conq_sub">Ganha-as a pescar e a completar a Peixedex.</string>
+</resources>

@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- No modo escuro usa-se o mesmo tema: as cores mudam através de values-night/colors.xml -->
+    <style name="Base.Theme.Aplicacaopesca" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cp_primaria</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/cp_primaria_suave</item>
+        <item name="colorOnPrimaryContainer">@color/cp_texto</item>
+        <item name="colorSecondary">@color/cp_destaque</item>
+        <item name="colorSecondaryContainer">@color/cp_primaria</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+        <item name="colorSurface">@color/cp_fundo</item>
+        <item name="colorOnSurface">@color/cp_texto</item>
+        <item name="colorOnSurfaceVariant">@color/cp_texto_suave</item>
+        <item name="colorSurfaceContainer">@color/cp_cartao</item>
+        <item name="colorSurfaceContainerHigh">@color/cp_cartao</item>
+        <item name="colorSurfaceContainerLow">@color/cp_cartao</item>
+        <item name="colorOutline">@color/cp_borda</item>
+        <item name="colorOutlineVariant">@color/cp_borda</item>
+        <item name="colorError">@color/cp_erro</item>
+        <item name="android:colorBackground">@color/cp_fundo</item>
+        <item name="android:windowBackground">@color/cp_fundo</item>
+        <item name="android:textColorPrimary">@color/cp_texto</item>
+        <item name="android:textColorSecondary">@color/cp_texto_suave</item>
+        <item name="shapeAppearanceSmallComponent">@style/Forma.Cp.Pequena</item>
+        <item name="shapeAppearanceMediumComponent">@style/Forma.Cp.Media</item>
+        <item name="materialCardViewStyle">@style/Cartao.Cp</item>
+    </style>
+</resources>

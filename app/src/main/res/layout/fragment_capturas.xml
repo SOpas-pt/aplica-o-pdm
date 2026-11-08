@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Capturas (separador «Nova» e «Histórico») -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rolagem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margem_ecra"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/margem_ecra"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Texto.Titulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/capturas_titulo" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@+id/tabNova"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+                <Button android:id="@+id/tabNova" style="@style/Botao.Alternar" android:text="@string/capturas_nova" />
+                <Button android:id="@+id/tabHistorico" style="@style/Botao.Alternar" android:text="@string/capturas_historico" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <!-- ================== NOVA (formulário) ================== -->
+        <LinearLayout
+            android:id="@+id/zonaNova"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <!-- Alerta de erro (peso em falta) -->
+            <LinearLayout
+                android:id="@+id/alertaErro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:visibility="gone">
+
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_alerta" android:tint="@color/cp_erro_texto" android:importantForAccessibility="no" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/txtAlertaTit" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/cp_erro_texto" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cap_corrija_campo" android:textColor="@color/cp_erro_texto" android:textSize="12.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Pesqueiro -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/cap_pesqueiro">
+                <AutoCompleteTextView
+                    android:id="@+id/edtPesqueiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Espécie -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/cap_especie">
+                <AutoCompleteTextView
+                    android:id="@+id/edtEspecie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Peso + Data lado a lado -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/caixaPeso"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/cap_peso"
+                    app:suffixText="kg">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/cap_data"
+                    app:endIconDrawable="@drawable/ic_calendario"
+                    app:endIconMode="custom">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Isco (chips) -->
+            <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/cap_isco" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipsIsco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:singleSelection="true" />
+
+            <!-- Fotografia -->
+            <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/cap_foto" />
+
+            <!-- Zona sem foto (dropzone) -->
+            <LinearLayout
+                android:id="@+id/dropFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_caixa_info"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_camara" android:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/cap_add_foto" android:textColor="@color/cp_texto" android:textSize="14.5sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtFotoDesbloqueia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cap_foto_desbloqueia" android:textColor="@color/cp_texto_suave" android:textSize="12.5sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/cap_foto_sub" android:textColor="@color/cp_texto_suave" android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Zona com foto (preview) -->
+            <FrameLayout
+                android:id="@+id/zonaComFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bg_cartao"
+                    android:scaleType="centerCrop"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_icone_info"
+                    android:paddingStart="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/cap_foto_adicionada"
+                    android:textColor="@color/cp_ok_texto"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnRemoverFoto"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="end|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_botao_redondo"
+                    android:contentDescription="@string/cap_foto_remover"
+                    android:src="@drawable/ic_fechar"
+                    android:tint="@color/cp_texto" />
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardar"
+                style="@style/Botao.Principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/cap_guardar"
+                app:icon="@drawable/ic_visto"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelarEdicao"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cap_cancelar_edicao"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- ================== HISTÓRICO ================== -->
+        <LinearLayout
+            android:id="@+id/zonaHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/hist_pesquisa"
+                app:startIconDrawable="@drawable/ic_pesquisa">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBuscaHistorico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/listaCapturas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/vazio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_cartao"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="26dp"
+                android:visibility="gone">
+
+                <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_livro" android:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+                <TextView style="@style/Texto.Seccao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/cap_sem_capturas" />
+                <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="@string/cap_sem_capturas_txt" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

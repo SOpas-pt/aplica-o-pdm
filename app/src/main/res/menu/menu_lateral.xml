@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grupo_ecras" android:checkableBehavior="single">
+        <item android:id="@+id/lat_pesqueiros" android:icon="@drawable/ic_pin" android:title="@string/nav_pesqueiros" />
+        <item android:id="@+id/lat_peixedex" android:icon="@drawable/ic_peixe" android:title="@string/nav_peixedex" />
+        <item android:id="@+id/lat_capturas" android:icon="@drawable/ic_livro" android:title="@string/nav_capturas" />
+        <item android:id="@+id/lat_licencas" android:icon="@drawable/ic_licenca" android:title="@string/nav_licencas" />
+        <item android:id="@+id/lat_estatisticas" android:icon="@drawable/ic_grafico" android:title="@string/nav_estatisticas" />
+        <item android:id="@+id/lat_conquistas" android:icon="@drawable/ic_trofeu" android:title="@string/conq_titulo" />
+        <item android:id="@+id/lat_guia" android:icon="@drawable/ic_agua" android:title="@string/menu_guia" />
+    </group>
+    <group android:id="@+id/grupo_conta">
+        <item android:id="@+id/lat_perfil" android:icon="@drawable/ic_perfil" android:title="@string/menu_perfil" />
+        <item android:id="@+id/lat_definicoes" android:icon="@drawable/ic_definicoes" android:title="@string/menu_definicoes" />
+        <item android:id="@+id/lat_ajuda" android:icon="@drawable/ic_info" android:title="@string/menu_ajuda" />
+    </group>
+</menu>

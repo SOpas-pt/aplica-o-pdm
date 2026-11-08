@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estatísticas -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margem_ecra"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/margem_ecra"
+        android:paddingBottom="24dp">
+
+        <TextView style="@style/Texto.Titulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_estatisticas" />
+        <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/est_sub" />
+
+        <!-- Aviso quando ainda não há capturas -->
+        <LinearLayout
+            android:id="@+id/avisoSemDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_cartao"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp"
+            android:visibility="gone">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_info" android:tint="@color/cp_destaque" android:importantForAccessibility="no" />
+            <TextView style="@style/Texto.Corpo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:text="@string/est_sem_capturas" />
+        </LinearLayout>
+
+        <!-- Totais lado a lado: capturas | recorde -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cartao"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_peixe" android:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+                    <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="@string/est_total" />
+                </LinearLayout>
+                <TextView android:id="@+id/txtTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/cp_texto" android:textSize="30sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtTotalSub" style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cartao"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_trofeu" android:tint="@color/cp_aviso_texto" android:importantForAccessibility="no" />
+                    <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="@string/est_recorde" />
+                </LinearLayout>
+                <TextView android:id="@+id/txtRecorde" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/cp_texto" android:textSize="30sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtRecordeSub" style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Pesqueiro mais visitado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:orientation="vertical"
+            android:padding="14dp">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_pin" android:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+                <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="@string/est_top_local" />
+            </LinearLayout>
+            <TextView android:id="@+id/txtTopLocal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/cp_texto" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtTopLocalSub" style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Peixedex (anel) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:layout_width="104dp"
+                android:layout_height="104dp">
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/anel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    app:indicatorColor="@color/cp_primaria"
+                    app:indicatorSize="104dp"
+                    app:trackColor="@color/cp_cartao2"
+                    app:trackCornerRadius="6dp"
+                    app:trackThickness="11dp" />
+                <TextView
+                    android:id="@+id/txtPct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/cp_texto"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_livro" android:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+                    <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="@string/est_peixedex" />
+                </LinearLayout>
+                <TextView android:id="@+id/txtPeixedex" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/cp_texto" android:textSize="21sp" android:textStyle="bold" />
+                <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/est_peixedex_sub" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Capturas por mês -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:orientation="vertical"
+            android:padding="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView style="@style/Texto.Seccao" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/est_por_mes" />
+                <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/est_por_mes_sub" />
+            </LinearLayout>
+            <pt.ubi.di.pdm.aplicacaopesca.ui.GraficoBarrasView
+                android:id="@+id/grafico"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <!-- Espécies mais capturadas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:orientation="vertical"
+            android:padding="14dp">
+            <TextView style="@style/Texto.Seccao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/est_top_especies" />
+            <LinearLayout
+                android:id="@+id/listaEspecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+            <TextView
+                android:id="@+id/txtSemEspecies"
+                style="@style/Texto.Suave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/est_sem_especies"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Cópia de segurança -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:orientation="vertical"
+            android:padding="14dp">
+            <TextView style="@style/Texto.Seccao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/copia_titulo" />
+            <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/copia_sub" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExportar"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/copia_exportar" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnImportar"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/copia_importar" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

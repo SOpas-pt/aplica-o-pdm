@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_pesqueiros" android:icon="@drawable/ic_pin" android:title="@string/nav_pesqueiros" />
+    <item android:id="@+id/nav_peixedex" android:icon="@drawable/ic_peixe" android:title="@string/nav_peixedex" />
+    <item android:id="@+id/nav_capturas" android:icon="@drawable/ic_livro" android:title="@string/nav_capturas" />
+    <item android:id="@+id/nav_licencas" android:icon="@drawable/ic_licenca" android:title="@string/nav_licencas" />
+    <item android:id="@+id/nav_estatisticas" android:icon="@drawable/ic_grafico" android:title="@string/nav_estatisticas" />
+</menu>

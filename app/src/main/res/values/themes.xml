@@ -1,0 +1,105 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base. As cores vêm de values/colors.xml (claro) e values-night/colors.xml (escuro). -->
+    <style name="Base.Theme.Aplicacaopesca" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cp_primaria</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/cp_primaria_suave</item>
+        <item name="colorOnPrimaryContainer">@color/cp_texto</item>
+        <item name="colorSecondary">@color/cp_destaque</item>
+        <item name="colorSecondaryContainer">@color/cp_primaria</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+        <item name="colorSurface">@color/cp_fundo</item>
+        <item name="colorOnSurface">@color/cp_texto</item>
+        <item name="colorOnSurfaceVariant">@color/cp_texto_suave</item>
+        <item name="colorSurfaceContainer">@color/cp_cartao</item>
+        <item name="colorSurfaceContainerHigh">@color/cp_cartao</item>
+        <item name="colorSurfaceContainerLow">@color/cp_cartao</item>
+        <item name="colorOutline">@color/cp_borda</item>
+        <item name="colorOutlineVariant">@color/cp_borda</item>
+        <item name="colorError">@color/cp_erro</item>
+        <item name="android:colorBackground">@color/cp_fundo</item>
+        <item name="android:windowBackground">@color/cp_fundo</item>
+        <item name="android:textColorPrimary">@color/cp_texto</item>
+        <item name="android:textColorSecondary">@color/cp_texto_suave</item>
+        <item name="shapeAppearanceSmallComponent">@style/Forma.Cp.Pequena</item>
+        <item name="shapeAppearanceMediumComponent">@style/Forma.Cp.Media</item>
+        <item name="materialCardViewStyle">@style/Cartao.Cp</item>
+    </style>
+
+    <style name="Theme.Aplicacaopesca" parent="Base.Theme.Aplicacaopesca" />
+
+    <!-- cantos arredondados modernos -->
+    <style name="Forma.Cp.Pequena" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+    <style name="Forma.Cp.Media" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="Cartao.Cp" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/cp_cartao</item>
+        <item name="strokeColor">@color/cp_borda</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <!-- textos -->
+    <style name="Texto.Titulo" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cp_texto</item>
+    </style>
+    <style name="Texto.Seccao" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cp_texto</item>
+    </style>
+    <style name="Texto.Corpo" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/cp_texto</item>
+    </style>
+    <style name="Texto.Suave" parent="">
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:textColor">@color/cp_texto_suave</item>
+    </style>
+    <style name="Texto.Rotulo" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/cp_texto_suave</item>
+    </style>
+
+    <!-- botão principal (azul, 52dp) -->
+    <style name="Botao.Principal" parent="Widget.Material3.Button">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="backgroundTint">@color/cp_primaria</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+    <style name="Botao.Contorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="strokeColor">@color/cp_borda</item>
+        <item name="android:textColor">@color/cp_texto</item>
+        <item name="iconTint">@color/cp_texto</item>
+    </style>
+
+    <!-- chips de filtro -->
+    <style name="Chip.Filtro" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_fundo</item>
+        <item name="android:textColor">@color/chip_texto</item>
+        <item name="chipStrokeColor">@color/cp_borda</item>
+        <item name="chipStrokeWidth">1.5dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipCornerRadius">18dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

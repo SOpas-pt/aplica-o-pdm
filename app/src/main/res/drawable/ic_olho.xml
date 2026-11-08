@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Olho (para «Como identificar» na ficha de espécie). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M2,12 C4,7 8,4 12,4 C16,4 20,7 22,12 C20,17 16,20 12,20 C8,20 4,17 2,12 Z M12,8 A4,4 0 1 0 12,16 A4,4 0 1 0 12,8 Z" />
+</vector>

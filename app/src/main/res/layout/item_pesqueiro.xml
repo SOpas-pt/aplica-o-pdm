@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartão de um pesqueiro na lista -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <FrameLayout
+            android:id="@+id/bola"
+            android:layout_width="46dp"
+            android:layout_height="46dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_peixe"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/txtNome" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/cp_texto" android:textSize="15.5sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtRegiao" style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:drawablePadding="4dp" app:drawableStartCompat="@drawable/ic_pin_pequeno" />
+            <TextView android:id="@+id/txtLicenca" style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:drawablePadding="4dp" android:textStyle="bold" app:drawableStartCompat="@drawable/ic_licenca_pequeno" />
+            <com.google.android.material.chip.ChipGroup android:id="@+id/tags" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" app:chipSpacingHorizontal="5dp" app:chipSpacingVertical="4dp" />
+            <TextView android:id="@+id/txtEstado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_seguinte"
+            app:tint="@color/cp_texto_suave" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

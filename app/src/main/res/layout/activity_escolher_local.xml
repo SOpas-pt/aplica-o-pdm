@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Escolher o local no mapa (tocar + confirmar). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cp_fundo"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margem_cabecalho"
+        android:paddingEnd="@dimen/margem_cabecalho">
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_botao_redondo"
+            android:contentDescription="@string/voltar"
+            android:src="@drawable/ic_voltar"
+            android:tint="@color/cp_texto" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="@string/marcar_no_mapa"
+            android:textColor="@color/cp_texto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_caixa_info"
+        android:gravity="center_vertical"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:text="@string/mapa_instrucao"
+        android:textColor="@color/cp_texto"
+        android:textSize="13sp"
+        app:drawableStartCompat="@drawable/ic_info"
+        app:drawableTint="@color/cp_destaque" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp">
+
+        <pt.ubi.di.pdm.aplicacaopesca.ui.MapaPortugalView
+            android:id="@+id/mapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_margin="18dp"
+            android:orientation="vertical">
+            <ImageButton android:id="@+id/btnZoomMais" style="@style/Botao.Zoom" android:contentDescription="@string/zoom_aproximar" android:src="@drawable/ic_mais" />
+            <ImageButton android:id="@+id/btnZoomMenos" style="@style/Botao.Zoom" android:contentDescription="@string/zoom_afastar" android:src="@drawable/ic_menos" />
+            <ImageButton android:id="@+id/btnZoomRepor" style="@style/Botao.Zoom" android:contentDescription="@string/zoom_repor" android:src="@drawable/ic_fechar" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cp_cartao"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margem_ecra"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/margem_ecra"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView style="@style/Texto.Rotulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/localizacao_rotulo" />
+            <TextView
+                android:id="@+id/txtCoords"
+                style="@style/Texto.Corpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mapa_toque_marcar" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmar"
+            style="@style/Botao.Principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:enabled="false"
+            android:text="@string/usar_este_local"
+            app:icon="@drawable/ic_visto"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Peixedex (grelha de todas as espécies) -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margem_ecra"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/margem_ecra"
+        android:paddingBottom="24dp">
+
+        <TextView style="@style/Texto.Titulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_peixedex" />
+        <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/peixedex_sub" />
+
+        <!-- Seletor «Ver a Peixedex de» -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/peixedex_ver_de">
+            <AutoCompleteTextView
+                android:id="@+id/edtLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Cartão de progresso -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtProgresso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/cp_texto"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_icone_info"
+                    android:paddingStart="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/cp_ok_texto"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/barra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:max="100"
+                app:indicatorColor="@color/cp_primaria"
+                app:trackColor="@color/cp_cartao2"
+                app:trackCornerRadius="5dp"
+                app:trackThickness="9dp" />
+
+            <TextView
+                android:id="@+id/txtDica"
+                style="@style/Texto.Suave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerLocal"
+                style="@style/Botao.Contorno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/peixedex_ver_local"
+                android:visibility="gone"
+                app:icon="@drawable/ic_pin"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+
+        <!-- Grelha das espécies -->
+        <LinearLayout
+            android:id="@+id/grelha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <!-- Próximo desafio -->
+        <LinearLayout
+            android:id="@+id/cartaoProximo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <ImageView android:layout_width="26dp" android:layout_height="26dp" android:src="@drawable/ic_camara" android:tint="@color/cp_destaque" android:importantForAccessibility="no" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/peixedex_proximo" android:textColor="@color/cp_texto" android:textSize="14sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtProximoSub" style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProximo"
+                style="@style/Botao.Principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:text="@string/ver"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Conquistas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartao"
+            android:orientation="vertical"
+            android:padding="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView style="@style/Texto.Seccao" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/conq_titulo" />
+                <TextView android:id="@+id/txtConquistas" style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/barraConquistas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:max="100"
+                app:indicatorColor="@color/cp_primaria"
+                app:trackColor="@color/cp_cartao2"
+                app:trackCornerRadius="5dp"
+                app:trackThickness="9dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConquistas"
+                style="@style/Botao.Contorno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/conq_ver_todas"
+                app:icon="@drawable/ic_trofeu"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

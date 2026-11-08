@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mosaico de uma espécie (ilustração + nome). Usado na grelha do local e na Peixedex. -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <pt.ubi.di.pdm.aplicacaopesca.ui.PeixeView android:id="@+id/peixe" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <!-- Fotografia real sobrepõe o PeixeView quando a espécie a tem. -->
+            <ImageView
+                android:id="@+id/imgFoto"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#0A2C48"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:importantForAccessibility="no" />
+            <FrameLayout android:id="@+id/cadeado" android:layout_width="24dp" android:layout_height="24dp" android:layout_gravity="end|top" android:layout_margin="6dp" android:background="@drawable/bg_cadeado" android:visibility="gone">
+                <ImageView android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="center" android:src="@drawable/ic_cadeado" android:tint="@color/white" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <FrameLayout android:id="@+id/visto" android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="end|top" android:layout_margin="6dp" android:visibility="gone">
+                <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_gravity="center" android:src="@drawable/ic_visto" android:tint="@color/white" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <TextView android:id="@+id/txtQuem" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:background="@drawable/bg_degrade_baixo" android:gravity="center" android:paddingTop="14dp" android:paddingBottom="6dp" android:text="@string/quem_e_este_peixe" android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold" android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="8dp" android:paddingTop="6dp" android:paddingEnd="8dp" android:paddingBottom="8dp">
+            <TextView android:id="@+id/txtNumero" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/cp_texto_suave" android:textSize="10.5sp" android:textStyle="bold" android:visibility="gone" />
+            <TextView android:id="@+id/txtNome" android:layout_width="match_parent" android:layout_height="wrap_content" android:ellipsize="end" android:maxLines="1" android:textColor="@color/cp_texto" android:textSize="12.5sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtGrupo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/cp_texto_suave" android:textSize="11sp" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Licença exigida: sinal verde (tem), laranja (a expirar) ou vermelho (não tem / expirada) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/caixa"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal"
+    android:padding="14dp">
+
+    <FrameLayout android:id="@+id/sinal" android:layout_width="42dp" android:layout_height="42dp">
+        <ImageView android:id="@+id/icoSinal" android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="center" android:tint="@color/white" android:importantForAccessibility="no" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/txtNome" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/cp_texto" android:textSize="15sp" android:textStyle="bold" />
+        <TextView android:id="@+id/txtEntidade" style="@style/Texto.Suave" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" />
+        <TextView android:id="@+id/txtEstado" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/txtComo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_caixa_info" android:padding="10dp" android:textColor="@color/cp_texto" android:textSize="12.5sp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAcao" style="@style/Widget.Material3.Button" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginTop="10dp" android:insetTop="0dp" android:insetBottom="0dp" android:textSize="13.5sp" android:textStyle="bold" app:cornerRadius="12dp" app:backgroundTint="@color/cp_primaria" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ecrã principal: barra de topo + ecrã atual (fragmento) + barra inferior, com menu lateral -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/conteudo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cp_fundo"
+        android:orientation="vertical">
+
+        <include android:id="@+id/barra" layout="@layout/barra_topo" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/fragmentos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fabNovoLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:text="@string/novo_local"
+                android:visibility="gone"
+                app:backgroundTint="@color/cp_primaria"
+                app:icon="@drawable/ic_mais"
+                app:iconTint="@color/white"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navInferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cp_cartao"
+            app:itemActiveIndicatorStyle="@style/Indicador.Nav"
+            app:itemIconTint="@color/nav_icone"
+            app:itemTextColor="@color/nav_item"
+            app:itemTextAppearanceActive="@style/Texto.Nav"
+            app:itemTextAppearanceInactive="@style/Texto.Nav"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/nav_inferior" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navLateral"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/cp_cartao"
+        app:headerLayout="@layout/cabecalho_menu"
+        app:itemIconTint="@color/cp_texto"
+        app:itemTextColor="@color/cp_texto"
+        app:menu="@menu/menu_lateral" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cores do MODO CLARO (alto contraste para leitura ao sol).
+     As mesmas cores, com valores do modo escuro, estão em values-night/colors.xml -->
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="cp_fundo">#F2F5F9</color>
+    <color name="cp_cartao">#FFFFFF</color>
+    <color name="cp_cartao2">#EAF0F7</color>
+    <color name="cp_borda">#BAC7D8</color>
+    <color name="cp_texto">#08131F</color>
+    <color name="cp_texto_suave">#3F5068</color>
+    <color name="cp_primaria">#1D4ED8</color>
+    <color name="cp_primaria_suave">#1F1D4ED8</color>
+    <color name="cp_destaque">#1D4ED8</color>
+
+    <color name="cp_ok">#16A34A</color>
+    <color name="cp_ok_texto">#14532D</color>
+    <color name="cp_ok_fundo">#DCFCE7</color>
+    <color name="cp_aviso">#EA580C</color>
+    <color name="cp_aviso_texto">#7C2D12</color>
+    <color name="cp_aviso_fundo">#FFEDD5</color>
+    <color name="cp_erro">#DC2626</color>
+    <color name="cp_erro_texto">#7F1D1D</color>
+    <color name="cp_erro_fundo">#FEE2E2</color>
+    <color name="cp_cinza">#64748B</color>
+
+    <!-- mapa -->
+    <color name="mapa_oceano">#CBE2F7</color>
+    <color name="mapa_espanha">#E4E8EE</color>
+    <color name="mapa_pt">#FFFFFF</color>
+    <color name="mapa_pt2">#EDF2F8</color>
+    <color name="mapa_contorno">#6B7F99</color>
+    <color name="mapa_rio">#2563EB</color>
+    <color name="mapa_texto">#5B6B82</color>
+    <color name="mapa_etiqueta_fundo">#EBFFFFFF</color>
+
+    <!-- cabeçalho do menu lateral -->
+    <color name="cabecalho1">#DBEAFE</color>
+    <color name="cabecalho2">#EFF6FF</color>
+    <color name="marca_agua">#211D4ED8</color>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Peixe transparente atrás/ao lado do perfil no menu lateral -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="110dp"
+    android:viewportWidth="200" android:viewportHeight="110">
+    <path android:fillColor="@color/marca_agua" android:pathData="M70,34C82,10 112,8 128,36Z" />
+    <path android:fillColor="@color/marca_agua" android:pathData="M84,80C92,98 108,100 114,84Z" />
+    <path android:fillColor="@color/marca_agua" android:pathData="M140,55L188,22C178,42 178,68 188,88Z" />
+    <path android:fillColor="@color/marca_agua" android:pathData="M12,56C34,26 90,18 146,50L146,60C90,92 34,86 12,56Z" />
+    <path android:fillColor="#00000000" android:strokeColor="@color/cabecalho1" android:strokeWidth="4" android:strokeLineCap="round" android:pathData="M48,34C58,46 58,66 48,78" />
+    <path android:fillColor="@color/cabecalho1" android:pathData="M26,50a6,6 0 1,0 12,0a6,6 0 1,0 -12,0" />
+    <path android:fillColor="#00000000" android:strokeColor="@color/cabecalho1" android:strokeWidth="3" android:strokeLineCap="round" android:pathData="M70,46q8,6 0,12M88,44q8,7 0,14M106,46q7,6 0,12" />
+</vector>

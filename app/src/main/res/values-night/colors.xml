@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cores do MODO ESCURO (tema principal da app: azul-marinho) -->
+<resources>
+    <color name="cp_fundo">#071324</color>
+    <color name="cp_cartao">#0F233C</color>
+    <color name="cp_cartao2">#132D4A</color>
+    <color name="cp_borda">#1E3A5F</color>
+    <color name="cp_texto">#EAF2FF</color>
+    <color name="cp_texto_suave">#8CA5C6</color>
+    <color name="cp_primaria">#2563EB</color>
+    <color name="cp_primaria_suave">#382563EB</color>
+    <color name="cp_destaque">#7DB2FF</color>
+
+    <color name="cp_ok">#22C55E</color>
+    <color name="cp_ok_texto">#4ADE80</color>
+    <color name="cp_ok_fundo">#2922C55E</color>
+    <color name="cp_aviso">#F59E0B</color>
+    <color name="cp_aviso_texto">#FBBF24</color>
+    <color name="cp_aviso_fundo">#2BF59E0B</color>
+    <color name="cp_erro">#EF4444</color>
+    <color name="cp_erro_texto">#FCA5A5</color>
+    <color name="cp_erro_fundo">#2BEF4444</color>
+    <color name="cp_cinza">#64748B</color>
+
+    <color name="mapa_oceano">#06182C</color>
+    <color name="mapa_espanha">#102640</color>
+    <color name="mapa_pt">#1D3F66</color>
+    <color name="mapa_pt2">#173659</color>
+    <color name="mapa_contorno">#4F86C6</color>
+    <color name="mapa_rio">#4C9BFF</color>
+    <color name="mapa_texto">#6F8DB3</color>
+    <color name="mapa_etiqueta_fundo">#D1071324</color>
+
+    <color name="cabecalho1">#12335C</color>
+    <color name="cabecalho2">#0B2140</color>
+    <color name="marca_agua">#26FFFFFF</color>
+</resources>

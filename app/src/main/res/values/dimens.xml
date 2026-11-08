@@ -1,0 +1,7 @@
+<resources>
+    <!-- margens laterais dos ecrãs: crescem com a largura para o conteúdo não esticar em tablets / landscape -->
+    <dimen name="margem_ecra">16dp</dimen>
+    <dimen name="margem_cabecalho">12dp</dimen>
+    <dimen name="margem_perfil">24dp</dimen>
+    <integer name="colunas_especies">3</integer>
+</resources>

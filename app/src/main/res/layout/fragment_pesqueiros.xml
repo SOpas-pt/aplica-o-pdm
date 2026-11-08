@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Áreas de pesca: pesquisa, filtros, ordenação, lista paginada (3 por página) ou mapa -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rolagem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margem_ecra"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/margem_ecra"
+        android:paddingBottom="96dp">
+
+        <!-- pesquisa + ordenar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/caixaPesquisa"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:boxBackgroundColor="@color/cp_cartao"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/cp_primaria"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_pesquisa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPesquisa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pesquisar_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFiltros"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/filtros"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:cornerRadius="14dp"
+                app:icon="@drawable/ic_filtro"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/cp_texto"
+                app:strokeColor="@color/cp_borda" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOrdenar"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/ordenar"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:cornerRadius="14dp"
+                app:icon="@drawable/ic_ordenar"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/cp_texto"
+                app:strokeColor="@color/cp_borda" />
+        </LinearLayout>
+
+        <!-- contagem + Lista/Mapa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtContagem"
+                style="@style/Texto.Suave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@+id/btnLista"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/btnLista"
+                    style="@style/Botao.Alternar"
+                    android:text="@string/vista_lista"
+                    app:icon="@drawable/ic_lista" />
+
+                <Button
+                    android:id="@+id/btnMapa"
+                    style="@style/Botao.Alternar"
+                    android:text="@string/vista_mapa"
+                    app:icon="@drawable/ic_mapa" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <!-- LISTA (paginada) -->
+        <LinearLayout
+            android:id="@+id/zonaLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/paginacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtPagina"
+                style="@style/Texto.Suave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- MAPA -->
+        <LinearLayout
+            android:id="@+id/zonaMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="22dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <pt.ubi.di.pdm.aplicacaopesca.ui.MapaPortugalView
+                        android:id="@+id/mapa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|top"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <ImageButton android:id="@+id/btnZoomMais" style="@style/Botao.Zoom" android:contentDescription="@string/zoom_aproximar" android:src="@drawable/ic_mais" />
+                        <ImageButton android:id="@+id/btnZoomMenos" style="@style/Botao.Zoom" android:contentDescription="@string/zoom_afastar" android:src="@drawable/ic_menos" />
+                        <ImageButton android:id="@+id/btnZoomRepor" style="@style/Botao.Zoom" android:contentDescription="@string/zoom_portugal" android:src="@drawable/ic_expandir" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtLegenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_cartao"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="8dp"
+                        android:textColor="@color/cp_texto"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Texto.Suave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/mapa_dica" />
+        </LinearLayout>
+
+        <!-- sem resultados -->
+        <LinearLayout
+            android:id="@+id/vazio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/ic_pesquisa" app:tint="@color/cp_texto_suave" android:importantForAccessibility="no" />
+            <TextView style="@style/Texto.Seccao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/sem_resultados" />
+            <TextView style="@style/Texto.Suave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:text="@string/sem_resultados_txt" />
+            <Button android:id="@+id/btnLimpar" style="@style/Botao.Contorno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/limpar_filtros" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

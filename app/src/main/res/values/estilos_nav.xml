@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- «pílula» azul por trás do ícone ativo na barra inferior -->
+    <style name="Indicador.Nav" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/cp_primaria</item>
+    </style>
+    <style name="Texto.Nav" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- caixinhas de contadores no cabeçalho do menu -->
+    <style name="Contador.Menu" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_cartao</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:textColor">@color/cp_texto</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- Lista | Mapa -->
+    <style name="Botao.Alternar" parent="Widget.Material3.Button.OutlinedButton.Icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@color/toggle_fundo</item>
+        <item name="android:textColor">@color/toggle_texto</item>
+        <item name="iconTint">@color/toggle_texto</item>
+        <item name="iconSize">16dp</item>
+        <item name="strokeColor">@color/cp_borda</item>
+    </style>
+    <!-- botões + / − / ⤢ do mapa -->
+    <style name="Botao.Zoom" parent="">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:background">@drawable/bg_cartao</item>
+        <item name="android:tint">@color/cp_texto</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    <!-- botões numerados da paginação -->
+    <style name="Botao.Pagina" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:minWidth">44dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="strokeColor">@color/cp_borda</item>
+        <item name="android:textColor">@color/cp_texto</item>
+    </style>
+    <!-- contadores Válidas / A expirar / Expiradas (texto e fundo definidos no código) -->
+    <style name="Contador.Licenca" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

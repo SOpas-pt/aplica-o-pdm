@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="margem_ecra">120dp</dimen>
+    <dimen name="margem_cabecalho">116dp</dimen>
+    <dimen name="margem_perfil">128dp</dimen>
+    <integer name="colunas_especies">5</integer>
+</resources>

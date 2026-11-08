@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de topo: menu (ou voltar), título, botão de tema e avatar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_botao_redondo"
+        android:contentDescription="@string/abrir_menu"
+        android:src="@drawable/ic_menu"
+        android:tint="@color/cp_texto" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/cp_texto"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnTema"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_botao_redondo"
+        android:contentDescription="@string/alternar_tema"
+        android:src="@drawable/ic_sol"
+        android:tint="@color/cp_texto" />
+
+    <FrameLayout
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_avatar"
+        android:clipToOutline="true">
+        <TextView
+            android:id="@+id/txtAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+</LinearLayout>
